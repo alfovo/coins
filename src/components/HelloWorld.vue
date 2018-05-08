@@ -26,6 +26,8 @@
       <li><a href="https://vue-loader.vuejs.org/en" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <button class="button-square">Enter a denomination</button>
+
   </div>
 </template>
 
@@ -40,7 +42,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+/*h3 {
   margin: 40px 0 0;
 }
 ul {
@@ -53,5 +55,5 @@ li {
 }
 a {
   color: #42b983;
-}
+}*/
 </style>

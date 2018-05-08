@@ -1,0 +1,129 @@
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+svg {
+	width: 30%;
+}
+
+.circle-frame {
+  transition: .3s ease-out;
+  // stroke: #d1d3d4;
+}
+.circle-frame:hover {
+	// fill: #d1d3d4;
+  fill: #e3f0d5;
+  // stroke-width: 8px;
+}
+
+.eagle-arrows-icon {
+  transition: transform .4s ease-out;
+  // adjust for firefox 
+  transform-origin: 50% 50%;
+}
+
+.eagle-arrows:hover .eagle-arrows-icon {
+  transform: rotate(-60deg);
+}
+
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+
+
+.button-square {
+  border: 2.5px solid #141414;
+  text-decoration: none;
+  padding: 15px 30px;
+  background-color: #141414;
+  color: #fff;
+  box-shadow: 1px 1px #141414;
+  transition-property: color, background-color, box-shadow;
+  transition: .3s ease-in-out;
+  &:hover, &:active {
+    box-shadow: 10px 10px #141414;
+    color: #141414;
+    background-color: #fff;
+  }
+}
+
+// .words {
+//   fill: #e3f0d5;
+//   transition: .3s ease-out;
+//   &:hover {
+//     fill: #fff;
+//   }
+// }
+
+.frame {
+  // opacity: 0;
+  // transition-property: opacity;
+  transition: .5s ease-out;
+  // background-position: 0 0;
+  // &:hover {
+  //   background-position: 0 0 100% 100%;
+  // }
+  &:hover {
+    // opacity: 1;
+    // background-position: 100% 100%;
+    animation: barberpole 40s linear infinite;
+    // .product-hover {
+    //   opacity: 1; 
+    // }
+  }
+}
+
+// .product-hover {
+//   // position: absolute;
+//   // top: 0;
+//   // left: 0;
+//   // right: 0;
+//   // bottom: 0;
+//   // opacity: 0;
+//   transition: opacity 0.3s ease;
+//   // background-size: 30px 30px;
+//   background-image: linear-gradient(
+//     45deg, 
+//     rgba(black, 0.1)  25%, 
+//     transparent       25%, 
+//     transparent       50%, 
+//     rgba(black, 0.1)  50%, 
+//     rgba(black, 0.1)  75%, 
+//     transparent       75%, 
+//     transparent
+//   );  
+//   animation: barberpole 0.5s linear infinite;
+// }
+
+@keyframes barberpole {
+  from { fill: slategray; }
+  to   { fill: black; }
+  // from { background-color: slategray; }
+  // to { background-color: black; }
+}
+
+// .shadow {
+//   transition: .3s ease-out;
+//   opacity: 0;
+//   &:hover {
+//     opacity: 1;
+//     // fill: #141414;
+//   }
+// }
