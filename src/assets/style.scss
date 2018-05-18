@@ -1,129 +1,164 @@
+$text-color: #2c3e50;
+$dark-color: #141414;
+$break-small: 320px;
+$break-large: 30em;
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font: 400 18px/1.5 'Avenir', Helvetica, -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-svg {
-	width: 30%;
-}
-
-.circle-frame {
-  transition: .3s ease-out;
-  // stroke: #d1d3d4;
-}
-.circle-frame:hover {
-	// fill: #d1d3d4;
-  fill: #e3f0d5;
-  // stroke-width: 8px;
-}
-
-.eagle-arrows-icon {
-  transition: transform .4s ease-out;
-  // adjust for firefox 
-  transform-origin: 50% 50%;
-}
-
-.eagle-arrows:hover .eagle-arrows-icon {
-  transform: rotate(-60deg);
+  color: $text-color;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  text-transform: uppercase;
 }
 
+p {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+
+// remove glow from inputs
+input[type="text"], textarea {
+	outline: none;
+	box-shadow:none !important;
+	border:1px solid $text-color !important;
+}
+
+// .form-control::-webkit-input-placeholder {
+// 	opacity: 0.6;
+// }
+// .form-control:focus {
+// 	box-shadow: 0 0 5px $text-color !important;
+// }
+// .col .right {
+//   text-align: right;
+// }
+
+#riddle {
+  text-align: center;
+  font-weight: 700;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  background: #b87333;
+  margin: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.col {
+  flex: 1;
+  max-width: 650px;
+  padding: 0px 5px;
+  // flex-grow ??
+  // flex-basis: 200px -- equal size when 200px or wider
+  margin: auto;
+}
+
+.primary {
+  flex: 2;
+}
+
+label {
+  font-weight: 700;
+}
+
+.button-row {
+  display: flex;
+  padding: 10px 0;
+  // justify-content: left;
+  // align-items: stretch;
+  // justify-content: left;
+  // max-width: 400px;
+}
+.col-button:last-child {
+  // flex: 1;
+  padding: 0 20px;
+  // margin: auto;
+}
+
+// .primary {
+//   margin: 0;
+
+// }
+
+// button styling
+// .button{
+
+// }
 
 .button-square {
-  border: 2.5px solid #141414;
+  border: 2.5px solid $dark-color;
   text-decoration: none;
-  padding: 15px 30px;
-  background-color: #141414;
+  width: 250px;
+  height: 70px;
+  background-color: $dark-color;
   color: #fff;
-  box-shadow: 1px 1px #141414;
+  // box-shadow: 1px 1px #141414;
   transition-property: color, background-color, box-shadow;
   transition: .3s ease-in-out;
   &:hover, &:active {
-    box-shadow: 10px 10px #141414;
-    color: #141414;
+    box-shadow: -10px 10px$dark-color;
+    color: $dark-color;
     background-color: #fff;
   }
 }
 
-// .words {
-//   fill: #e3f0d5;
-//   transition: .3s ease-out;
-//   &:hover {
-//     fill: #fff;
-//   }
-// }
-
-.frame {
-  // opacity: 0;
-  // transition-property: opacity;
-  transition: .5s ease-out;
-  // background-position: 0 0;
-  // &:hover {
-  //   background-position: 0 0 100% 100%;
-  // }
-  &:hover {
-    // opacity: 1;
-    // background-position: 100% 100%;
-    animation: barberpole 40s linear infinite;
-    // .product-hover {
-    //   opacity: 1; 
-    // }
+.button-submit {
+  border: 2.5px solid $dark-color;
+  text-decoration: none;
+  width: 125px;
+  height: 50px;
+  background-color: $dark-color;
+  color: #fff;
+  // box-shadow: 1px 1px #141414;
+  transition-property: opacity;
+  transition: .3s ease-in-out;
+  &:hover, &:active {
+    opacity: s0.7;
   }
 }
 
-// .product-hover {
-//   // position: absolute;
-//   // top: 0;
-//   // left: 0;
-//   // right: 0;
-//   // bottom: 0;
-//   // opacity: 0;
-//   transition: opacity 0.3s ease;
-//   // background-size: 30px 30px;
-//   background-image: linear-gradient(
-//     45deg, 
-//     rgba(black, 0.1)  25%, 
-//     transparent       25%, 
-//     transparent       50%, 
-//     rgba(black, 0.1)  50%, 
-//     rgba(black, 0.1)  75%, 
-//     transparent       75%, 
-//     transparent
-//   );  
-//   animation: barberpole 0.5s linear infinite;
-// }
-
-@keyframes barberpole {
-  from { fill: slategray; }
-  to   { fill: black; }
-  // from { background-color: slategray; }
-  // to { background-color: black; }
+.button-clear {
+  border: 2.5px solid $dark-color;
+  text-decoration: none;
+  width: 125px;
+  height: 50px;
+  // padding: 5px 50px;
+  background-color: #fff;
+  // box-shadow: 1px 1px #141414;
+  transition-property: color, background-color;
+  transition: .3s ease-in-out;
+  &:hover, &:active {
+    color: #fff;
+    background-color: $dark-color;
+  }
 }
 
-// .shadow {
-//   transition: .3s ease-out;
-//   opacity: 0;
-//   &:hover {
-//     opacity: 1;
-//     // fill: #141414;
-//   }
-// }
+
+// for different components
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .7s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
