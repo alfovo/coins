@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="row">
-      <div class="col right">
-        <p class="right"> Do you have the answer? Make your guess below.  </p>
+      <div class="col">
+        <p> Do you have the answer? Make your guess:  </p>
         <input v-model="guessAnswer" placeholder="any denomination">
-        <button class="button-square">
+        <button class="button-submit">
           <p>submit</p>
         </button>
       </div>

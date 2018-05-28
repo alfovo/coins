@@ -1,7 +1,8 @@
 <template>
   <div class="row">
     <div class="col">
-      <h1>{{ msg }}</h1>
+      <!-- <h1>{{ msg }}</h1> -->
+      <h1> Hello, my young numismatist friend.</h1>
       <p>
         Say, can you help me sort through my coin collection? I've been meaning to solve this riddle: 
       </p>
